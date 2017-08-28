@@ -1,0 +1,3 @@
+/home/fernando/Documentos/DemoService/obj/Debug/netcoreapp2.0/DemoService.csproj.CoreCompileInputs.cache
+/home/fernando/Documentos/DemoService/obj/Debug/netcoreapp2.0/DemoService.AssemblyInfoInputs.cache
+/home/fernando/Documentos/DemoService/obj/Debug/netcoreapp2.0/DemoService.AssemblyInfo.cs
