@@ -25,7 +25,7 @@ namespace DemoService
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddDbContext<DemoServiceContext>();
+            services.AddDbContext<DemoDBContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
