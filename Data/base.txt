@@ -6,10 +6,16 @@ CREATE TABLE "CustomersTypes" (
 INSERT INTO `CustomersTypes` (CustomerTypeId,Description) VALUES (1,'Incripto'),
  (2,'No Inscripto'),
  (3,'Consumidor Final');
-CREATE TABLE "Customers" ( `CustomerId` INT IDENTITY ( 1 , 1 ) NOT NULL, `FirstName` VARCHAR ( 50 ), `MiddleName` VARCHAR ( 50 ), `SurName` VARCHAR ( 50 ), `EmailAddress` VARCHAR ( 150 ), `CustomerTypeId` INT, `Notes` VARCHAR ( 5000 ), 
-	PRIMARY KEY(`CustomerId`),
-	FOREIGN KEY (CustomerTypeId) REFERENCES CustomersTypes(CustomerTypeId)
-	);
+CREATE TABLE "Customers" (
+	`CustomerId`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`FirstName`	VARCHAR(50),
+	`MiddleName`	VARCHAR(50),
+	`SurName`	VARCHAR(50),
+	`EmailAddress`	VARCHAR(150),
+	`CustomerTypeId`	INT,
+	`Notes`	VARCHAR(5000),
+	FOREIGN KEY(`CustomerTypeId`) REFERENCES `CustomersTypes`(`CustomerTypeId`)
+);
 INSERT INTO `Customers` (CustomerId,FirstName,MiddleName,SurName,EmailAddress,CustomerTypeId,Notes) VALUES (1,'Azalia','B','Snow','elit.pellentesque.a@necligula.net',2,NULL),
  (2,'Keelie','I','Wise','non.lorem@temporaugueac.ca',1,NULL),
  (3,'Lane','A','Ramsey','Quisque.imperdiet@metusAliquam.ca',3,NULL),
@@ -509,5 +515,6 @@ INSERT INTO `Customers` (CustomerId,FirstName,MiddleName,SurName,EmailAddress,Cu
  (497,'Courtney','D','Cash','Quisque.fringilla.euismod@anteiaculis.co.uk',1,NULL),
  (498,'Asher','C','Mclea','quam@luctuset.org',3,NULL),
  (499,'Jena','L','Guerra','nec.metus.facilisis@Loremipsum.edu',3,NULL),
- (500,'Christia','F','Gree','bibendum.fermentum.metus@arcuCurabitur.edu',1,NULL);
+ (500,'Christia','F','Gree','bibendum.fermentum.metus@arcuCurabitur.edu',1,NULL),
+ (501,'Fernando','A','Sonego','fs@gmail.com',1,'ninguna');
 COMMIT;
