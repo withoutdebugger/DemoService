@@ -20,14 +20,12 @@ namespace DemoService.Controllers
             _context = context;
         }
 
-        // GET: api/CustomersTypes
         [HttpGet]
         public IEnumerable<CustomersTypes> GetCustomersTypes()
         {
             return _context.CustomersTypes;
         }
 
-        // GET: api/CustomersTypes/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetCustomersTypes([FromRoute] int id)
         {
@@ -46,7 +44,6 @@ namespace DemoService.Controllers
             return Ok(customersTypes);
         }
 
-        // PUT: api/CustomersTypes/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutCustomersTypes([FromRoute] int id, [FromBody] CustomersTypes customersTypes)
         {
@@ -81,7 +78,6 @@ namespace DemoService.Controllers
             return NoContent();
         }
 
-        // POST: api/CustomersTypes
         [HttpPost]
         public async Task<IActionResult> PostCustomersTypes([FromBody] CustomersTypes customersTypes)
         {
@@ -110,7 +106,6 @@ namespace DemoService.Controllers
             return CreatedAtAction("GetCustomersTypes", new { id = customersTypes.CustomerTypeId }, customersTypes);
         }
 
-        // DELETE: api/CustomersTypes/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCustomersTypes([FromRoute] int id)
         {

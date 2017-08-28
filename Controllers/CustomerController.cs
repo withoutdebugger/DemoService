@@ -17,14 +17,12 @@ namespace DemoService.Controllers
             _context = context;         
         }       
 
-        // GET: api/Customers
         [HttpGet]
         public IEnumerable<Customers> GetCustomers()
         {
             return _context.Customers;
         }
-
-        // GET: api/Customers/5
+        
         [HttpGet("{id}")]
         public async Task<IActionResult> GetCustomers([FromRoute] int id)
         {
@@ -43,7 +41,7 @@ namespace DemoService.Controllers
             return Ok(customers);
         }
 
-        [HttpGet/*(Name = "GetCustomerPaging")*/]
+        [HttpGet]
         [Route("{numberPage}/{perPage}")]
         public ViewModelPage GetCustomerPaging(int numberPage, int perPage)
         {
@@ -60,7 +58,6 @@ namespace DemoService.Controllers
             return page;
         }
 
-        // PUT: api/Customers/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutCustomers([FromRoute] int id, [FromBody] Customers customers)
         {
@@ -95,7 +92,6 @@ namespace DemoService.Controllers
             return NoContent();
         }
 
-        // POST: api/Customers
         [HttpPost]
         public  IActionResult PostCustomers([FromBody] Customers customers)
         {
