@@ -3,16 +3,16 @@ using System.Collections.Generic;
 
 namespace DemoService.Models
 {
-    public partial class CustomerType
+    public partial class CustomersTypes
     {
-        public CustomerType()
+        public CustomersTypes()
         {
-            Customers = new HashSet<Customer>();
+            Customers = new HashSet<Customers>();
         }
 
         public int CustomerTypeId { get; set; }
         public string Description { get; set; }
 
-        public virtual ICollection<Customer> Customers { get; set; }
+        public virtual ICollection<Customers> Customers { get; set; }
     }
 }

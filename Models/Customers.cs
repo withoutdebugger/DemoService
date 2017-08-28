@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DemoService.Models
 {
-    public partial class Customer
+    public partial class Customers
     {
         public int CustomerId { get; set; }
         public string FirstName { get; set; }
@@ -13,6 +13,6 @@ namespace DemoService.Models
         public int? CustomerTypeId { get; set; }
         public string Notes { get; set; }
 
-        public virtual CustomerType CustomerType { get; set; }
+        public virtual CustomersTypes CustomerType { get; set; }
     }
 }
